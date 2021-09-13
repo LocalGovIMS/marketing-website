@@ -1,0 +1,22 @@
+---
+layout: master
+---
+
+<div class="c-banner c-banner--blog">
+    <div class="c-banner__fade">
+    </div>
+</div>
+
+<div class="o-container o-container--padded o-container--follower">
+    <div class="o-wrapper o-wrapper--content">
+        <aside class="c-breadcrumbs" aria-labelledby="c-breadcrumbs__trail-title"><!-- TODO: Sort aria labelling -->
+            {% include breadcrumbs.html showLast="false" lead="You are here:" %}
+        </aside>
+        <article class="" aria-labelledby="c-page__article-title" role="article">
+            <div class="">
+                <h2 class="" id="c-page__article-title" role="heading" aria-level="2">{{ page.title }}</h2>
+                {{ content }}
+            </div>
+        </article>
+    </div>
+</div>

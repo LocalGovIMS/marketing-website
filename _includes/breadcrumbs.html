@@ -1,0 +1,54 @@
+{% assign container = include.container | default: "c-breadcrumbs__breadcrumb" %}
+{% assign path = page.url | split: '/' %}
+{% assign pages = site.pages %}
+{% assign showLast = include.showLast | default: "true" %}
+{% assign title = include.title | default: "Breadcrumbs" %}
+{% assign level = include.level | default: "2" %}
+{% assign lead = include.lead %}
+
+{% if showLast == "false" %}
+{% assign path = path | pop %}
+{% endif %}
+
+{% assign limit = path.size %}
+
+
+
+<div class="c-breadcrumbs"><!-- TODO: Match up how we do --first and --last here -->
+    <h{{ level }} class="c-breadcrumbs__title" id="{{ container }}-title" role="heading" aria-level="{{ level }}">{{ title }}</h{{ level }}>
+    {% if lead %}
+        <p class="c-breadcrumbs__lead">{{ lead }}</p>
+    {% endif %}
+    <ul class="c-breadcrumbs__list" role="list" aria-labelledby="{{ container }}-title" aria-setsize="{{ limit }}">
+        
+        {% for segment in path %}
+        {% assign breadcrumbs = breadcrumbs | append: segment | append: "/" %}
+
+        {% assign index = forloop.index | plus: 0 %}
+        {% assign limit = limit | plus: 0 %}
+        {% assign itemClassPre = container | append: "-item" %}
+        {% assign itemClass = itemClassPre %}
+
+        {% if index == 1 %}
+            {% assign itemClass = itemClass | append: " " | append: itemClassPre | append: "--first" %}
+        {% endif %}
+        {% if index == limit %}
+            {% assign itemClass = itemClass | append: " " | append: itemClassPre | append: "--last" %}
+        {% endif %}
+        
+        <li class="{{ itemClass }}" role="listitem" aria-posinset="{{ forloop.index }}">
+            <a class="c-breadcrumbs__link" href="{{ breadcrumbs | relative_url }}" role="link">
+            
+            {% for page in pages %}
+                {% if page.url == breadcrumbs %}
+                    {{ page.breadcrumb | default: page.title }}
+                {% endif %}
+            {% endfor %}
+            
+            </a>
+        </li>
+
+        {% endfor %}
+        
+    </ul>
+</div>

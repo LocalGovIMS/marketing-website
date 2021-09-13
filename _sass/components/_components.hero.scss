@@ -1,0 +1,45 @@
+// Default any items that may be missing from _settings.global.scss
+$color--focus: #000000 !default;
+
+.c-hero {
+    align-items: center;
+    display: flex;
+    flex-flow: row wrap;
+    min-height: 70vh;
+    justify-content: center;
+    width: calc(100vw - (100vw - 100%));
+}
+
+.c-hero__title {
+    color: $color--focus;
+    font-size: 3rem;
+    margin: 0;
+}
+
+.c-hero__image {
+    display: none;
+}
+
+.c-hero__text {
+    margin: 1.5rem 0;
+}
+
+
+@media all and (min-width: $width--desktop) {
+        
+    .c-hero__title {
+        width: 50%;
+    }
+
+    .c-hero__text {
+        width: 50%;
+    }
+    
+    .c-hero__image {
+        display: initial;
+        float: right;
+        margin-top: -18rem;
+        max-height: 30rem;
+    }
+
+}

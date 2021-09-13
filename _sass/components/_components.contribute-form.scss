@@ -1,0 +1,31 @@
+.c-contribute__form {
+    border: solid 1px $color--white-border;
+    padding: 2rem;
+}
+
+.c-contribute__label {
+    display: block;
+    margin-bottom: .4rem;
+    width: 100%;
+}
+
+.c-contribute__text-field {
+    border: solid 1px $color--white-border;
+    border-radius: .4rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.c-contribute__text-area {
+    border: solid 1px $color--white-border;
+    border-radius: .4rem;
+    height: 6rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+@media all and (min-width: $width--desktop) {
+
+}

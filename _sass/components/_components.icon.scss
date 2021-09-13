@@ -1,0 +1,21 @@
+.c-icon {
+    background-color: lighten($color--tertiary, 10%);
+    border: solid 1px $color--tertiary;
+    display: inline-block;
+    fill: $color--white;
+    padding: 1rem;
+    width: 4rem;
+    height: 4rem;
+
+    &:hover {
+        background-color: lighten($color--tertiary, 20%);
+    }
+}
+
+.c-icon__svg {
+    fill: $color--white;    
+}
+
+.c-icon--spaced {
+    margin: 1rem 0;
+}

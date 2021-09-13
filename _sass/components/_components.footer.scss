@@ -1,0 +1,35 @@
+.c-footer {
+    background-color: lighten($color--black, 75%);
+}
+
+.c-footer__wrapper {
+    margin: auto;
+    max-width: $width--content;
+}
+
+.c-footer__posts {
+    display: none;
+}
+
+.c-footer__about {
+    display: none;
+}
+
+.c-footer__nav {
+    display: none;
+}
+
+
+
+.c-footer__disclaimer {
+    background-color: lighten($color--black, 70%);
+    //color: $color--white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.c-footer__disclaimer-wrapper {
+    margin: auto;
+    max-width: $width--content;
+}
+

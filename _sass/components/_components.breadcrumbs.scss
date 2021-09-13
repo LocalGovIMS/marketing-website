@@ -1,0 +1,50 @@
+.c-breadcrumbs {
+    
+}
+
+.c-breadcrumbs__trail-wrapper {
+    width: 100%;
+}
+
+.c-breadcrumbs__trail-title {
+    display: none;
+}
+
+.c-breadcrumbs__trail-lead {
+    display: none;
+}
+
+.c-breadcrumbs__trail-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.c-breadcrumbs__trail-item {
+    display: inline-block;
+}
+
+.c-breadcrumbs__trail-item::before {
+    content: '\00BB';
+    padding: 0 .5rem;
+}
+
+.c-breadcrumbs__trail-item--first::before {
+    content: '';
+    padding: 0;
+}
+
+@media all and (min-width: $width--desktop) {
+    
+    .c-breadcrumbs__trail {
+        
+    }
+    
+    .c-breadcrumbs__trail-wrapper {
+        background-color: $color--white;
+        margin: auto;
+        max-width: $width--content;
+        padding: 2rem;
+    }
+
+}

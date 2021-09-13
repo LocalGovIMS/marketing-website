@@ -1,0 +1,24 @@
+.c-action {
+    background: linear-gradient(45deg, $color--tertiary 0%, darken($color--tertiary, 5%) 100%);
+    padding: 6rem 2rem;
+}
+
+.c-action__main-wrapper {
+    margin: auto;
+    max-width: $width--content;
+}
+
+.c-action__main-title {
+    color: $color--white;
+    filter: drop-shadow(0 0rem .1rem darken($color--tertiary, 20%));
+    font-size: 2rem;
+    margin: 0;
+}
+
+.c-action__main-text {
+    color: $color--white;
+}
+
+.c-action__main-link {
+    @extend .c-button--action;
+}

@@ -1,0 +1,25 @@
+.c-page__article {
+    padding: 0 2rem 6rem 2rem;
+}
+
+.c-page__article-title {
+    margin-top: 0;
+}
+
+.c-page__article-wrapper {
+    
+    margin: auto;
+    max-width: $width--content;
+}
+
+@media all and (min-width: $width--desktop) {
+
+    .c-page__article-wrapper {
+        background-color: $color--white;
+        max-width: $width--content;
+        padding: 0rem 2rem;
+    }
+
+
+
+}

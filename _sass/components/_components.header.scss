@@ -1,0 +1,117 @@
+.c-header {
+    left: 0;
+    position: fixed;
+    top: 0;
+    transition: all 0.5s ;
+    width: 100%;
+    z-index: 1;
+}
+
+.c-header--opaque {
+    background-color: $color--white;
+    filter: drop-shadow(0 0rem .5rem darken($color--white, 20%));
+}
+
+.c-header__brand-title {
+    color: $color--black;
+    font-size: $font-size--normal;
+    margin: 0;
+    padding: 1rem 1rem 1rem 2rem;
+}
+
+.c-header__nav {
+    background-color: lighten($color--black, 70%);
+    clear: both;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 2rem 0 2rem;
+    transition: max-height 0.15s ease-out;
+}
+
+.c-header__nav-title {
+    padding-top: 1rem;
+}
+
+.c-header__nav--open {
+    border-bottom: solid 1px #bbbbbb; // TODO: replace with a color variable
+    max-height: 60rem;
+    transition: max-height 0.25s ease-in;
+    padding: 0 2rem 1.5rem 2rem;
+}
+
+.c-header__nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.c-header__nav-link {
+    color: $color--black;
+    display: block;
+    padding: 1rem;
+
+    &:hover {
+        background-color: lighten($color--black, 60%);
+    }
+}
+
+.c-header__nav-switch {
+    cursor: pointer;
+    float: left;
+    padding: .9rem 1rem 0 2rem;
+}
+ 
+.c-header__nav-switchBar1, .c-header__nav-switchBar2, .c-header__nav-switchBar3 {
+    width: 1.5rem;
+    height: 2px;
+    background-color: $color--black;
+    margin-top: 3.3px;
+    transition: 0.4s;
+}
+  
+.c-header__nav-switch--open .c-header__nav-switchBar1 {
+    -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+    transform: rotate(-45deg) translate(-6px, 6px);
+}
+  
+.c-header__nav-switch--open .c-header__nav-switchBar2 {opacity: 0;}
+  
+.c-header__nav-switch--open .c-header__nav-switchBar3 {
+    -webkit-transform: rotate(45deg) translate(-1px, -1px);
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+@media all and (min-width: $width--desktop) {
+    
+    .c-header__nav-switch {
+        display: none;
+    }
+
+    .c-header__brand-title {
+        float: left;
+    }
+
+    .c-header__nav {
+        background-color: transparent;
+        max-height: none;
+        clear: none;
+        text-align: right;
+    }
+    
+    .c-header__nav-title {
+        display: none;
+    }
+        
+    .c-header__nav-item {
+        display: inline;
+    }
+
+    .c-header__nav-link {
+        display: inline-block;
+
+        &:hover {
+            background-color: transparent; 
+        }
+    } 
+
+}

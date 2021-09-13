@@ -1,0 +1,40 @@
+{% assign wrapper = include.wrapper %}
+{% assign level = include.level | default: "2" %}
+{% assign title = include.title | default: "Title" %}
+{% assign text = include.text | default: "Text content" %}
+{% assign linkUrl = include.linkUrl %}
+{% assign linkText = include.linkText | default: "Go" %}
+{% assign image = include.image %}
+{% assign styles = include.styles %}
+
+<!-- TODO: Consider removing wrapper in here -->
+{% if wrapper %}
+    {% for style in wrapper | split: "," %}
+        {% assign styleClass = " o-wrapper" | append: style %}
+        {% assign wrapperStyles = wrapperStyles | append: styleClass %}
+    {% endfor %}
+    <div class="o-wrapper{{ wrapperStyles }}">
+{% endif %}
+
+{% for style in styles | split: "," %}
+    {% assign styleClass = " c-hero--" | append: style %}
+    {% assign heroStyles = heroStyles | append: styleClass %}
+{% endfor %}
+<div class="c-hero{{ heroStyles}}">
+    <div class="o-wrapper">
+        <h{{ level }} class="c-hero__title">{{ title }}</h{{ level }}> <!-- TODO: Consider how we aria label the parent section -->
+        {% if image %}
+            <img class="c-hero__image" src="{{ image | prepend: "/assets/images/" | relative_url }}" />
+        {% endif %}
+        <p class="c-hero__text">{{ text | markdownify | remove: "<p>" | remove: "</p>" }}</p>
+        {% if linkUrl %}
+        <a class="c-button c-button--action c-hero__link" href="{{ linkUrl | relative_url }}">
+            {{ linkText }}
+        </a>
+        {% endif %}
+    </div>
+</div>
+
+{% if wrapper %}
+    </div>
+{% endif %}

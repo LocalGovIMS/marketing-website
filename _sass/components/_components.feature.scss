@@ -1,0 +1,37 @@
+
+.c-feature--highlight {
+    color: $color--white;
+}
+
+.c-feature__title {
+    margin: 0;
+}
+
+.c-feature__image {
+    display: none;
+}
+
+.c-feature__text {
+    margin: 1.5rem 0;
+}
+
+.c-feature__link {
+    @extend .c-button;
+}
+
+.c-feature__link--action {
+    @extend .c-button--action;
+}
+
+@media all and (min-width: $width--desktop) {
+
+    .c-feature__image {
+        display: block;
+        float: right;
+        margin-top: -4rem;
+        margin-left: 2rem;
+        //max-width: 400px;
+        max-height: 20rem;
+    }
+
+}

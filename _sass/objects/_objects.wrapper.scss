@@ -1,0 +1,24 @@
+// TODO: Set defaults
+
+.o-wrapper {
+    display: block;
+    width: 100%;
+}
+
+.o-wrapper--content {
+    margin: auto;
+    max-width: $width--content;
+}
+
+.o-wrapper--screen {
+    margin: auto;
+    max-width: $width--screen;
+}
+
+.o-wrapper--full {
+    width: 100%;
+}
+
+.o-wrapper--lifted {
+    margin-top: -20rem;
+}

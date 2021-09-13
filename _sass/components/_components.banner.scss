@@ -1,0 +1,16 @@
+.c-banner {
+    background-color: $color--tertiary;
+    width: 100%;
+}
+
+.c-banner--blog {
+    background-image: url("/assets/images/hero-blog.png");
+    background-repeat: no-repeat;
+    background-position: center 4rem;
+}
+
+.c-banner__fade {
+    background-color: $color--tertiary;
+    height: 20rem;
+    opacity: .7;
+}

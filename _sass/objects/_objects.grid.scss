@@ -1,0 +1,25 @@
+.o-grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    padding: 0;
+    width: 100%;
+}
+
+.o-grid--spaced {
+    justify-content: space-between;
+}
+
+.o-grid--third {
+    display: flex;
+    margin: 1rem 0;
+    width: 100%;
+}
+
+@media all and (min-width: $width--desktop) {
+
+    .o-grid--third {
+        width: 31%;
+    }
+
+}

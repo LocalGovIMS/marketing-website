@@ -1,0 +1,30 @@
+---
+layout: master
+---
+
+<div class="c-banner c-banner--blog">
+    <div class="c-banner__fade">
+    </div>
+</div>
+
+<div class="o-container o-container--padded o-container--follower">
+    <div class="o-wrapper o-wrapper--content">
+
+    <article aria-labelledby="c-video__article-title" role="article">
+        <aside class="c-breadcrumbs__trail" aria-labelledby="c-breadcrumbs__trail-title">
+            {% include breadcrumbs.html container="c-breadcrumbs__trail" showLast="false" lead="You are here:" %}
+        </aside>
+        <h2 class="c-video__article-title" id="c-video__article-title" role="heading" aria-level="2">{{ page.title }}</h2>
+        <section class="c-video">
+            <iframe class="c-video__iframe" src="https://www.youtube-nocookie.com/embed/{{ page.video }}"
+                frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+        </section>
+        <aside>
+            <p>Posted {{ page.date | date: '%B %d, %Y' }}.</p>
+        </aside>
+        <section>
+            <p>{{ page.excerpt }}</p>
+        </section>
+</article>
+
+</div></div>

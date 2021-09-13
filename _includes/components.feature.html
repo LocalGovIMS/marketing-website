@@ -1,0 +1,42 @@
+{% assign wrapper = include.wrapper %}
+{% assign level = include.level | default: "2" %}
+{% assign title = include.title | default: "Title" %}
+{% assign text = include.text | default: "Text content" %}
+{% assign linkUrl = include.linkUrl %}
+{% assign linkText = include.linkText | default: "Go" %}
+{% assign image = include.image %}
+{% assign styles = include.style | split: "," %}
+{% assign linkStyles = include.linkStyle | split: "," %}
+
+<!-- TODO: Consider removing wrapper in here -->
+{% if wrapper %}
+    {% for style in wrapper | split: "," %}
+        {% assign styleClass = " o-wrapper--" |  append: style %}
+        {% assign wrapperStyles = wrapperStyles | append: styleClass %}
+    {% endfor %}
+    <div class="o-wrapper{{ wrapperStyles }}">
+{% endif %}
+
+{% for style in styles %}
+    {% assign styleClass = " c-feature--" | append: style %}
+    {% assign featureStyles = featureStyles | append: styleClass %}
+{% endfor %}
+    <div class="c-feature{{ featureStyles}}">
+        <h{{ level }} class="c-feature__title">{{ title }}</h{{ level }}> <!-- TODO: Consider how we aria label the parent section -->
+        {% if image %}
+            <img class="c-feature__image" src="{{ image | prepend: "/assets/images/" | relative_url }}" />
+        {% endif %}
+        <p class="c-feature__text">{{ text | markdownify | remove: "<p>" | remove: "</p>" }}</p>
+        {% if linkUrl %}
+            {% for style in linkStyles %}
+                {% assign linkClass = linkClass | append: " c-feature__link--" | append: style %}
+            {% endfor %}
+            <a class="c-feature__link{{ linkClass }}" href="{{ linkUrl | relative_url }}">
+                {{ linkText }}
+            </a>
+        {% endif %}
+    </div>
+
+{% if wrapper %}
+    </div>
+{% endif %}

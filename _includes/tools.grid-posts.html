@@ -1,0 +1,24 @@
+{% assign categories = include.categories | default: "" %}
+{% assign filter = categories | prepend: "post.category contains '" | append: "'" %}
+{% assign posts = site.posts | where_exp: "post", filter %}
+
+{% assign limit = include.limit | default: posts.size %}
+{% assign excerpts = include.excerpts | default: "true" %}
+{% assign dates = include.dates | default: "true" %}
+{% assign grid = include.grid | default: "third" %}
+{% assign level = include.level | default: "2" %}
+
+<ul class="o-grid o-grid--spaced" role="list" aria-setsize="{{ limit }}">
+    {% for post in posts | limit: limit %}
+
+    {% assign index = forloop.index | plus: 0 %}
+    
+    <li class="o-grid--{{ grid }} o-list o-list--clear" role="listitem" aria-posinset="{{ index }}">
+        {% include  components.post.html
+                    level = level
+                    date = dates
+                    excerpt = excerpts  
+        %}
+    </li>
+    {% endfor %}
+</ul>

@@ -1,0 +1,14 @@
+.c-main {
+    padding-top: 0rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+@media all and (min-width: $width--desktop) {
+
+    .c-main {
+        padding-top: 0;
+    }
+}

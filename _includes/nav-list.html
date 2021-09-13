@@ -1,0 +1,30 @@
+{% assign links = site.pages | where_exp: "page", "page.navOrder" | sort:"navOrder" %}
+
+{% assign container = include.container | default: "c-nav__nav" %}
+{% assign limit = include.limit | default: links.size %}
+{% assign level = include.level | default: "2" %}
+{% assign title = include.title | default: "Navigation" %}
+
+<div class="{{ container }}-wrapper">
+    <h{{ level }} class="{{ container }}-title" id="{{ container }}-title" role="heading" aria-level="{{ level }}">{{ title }}</h{{ level }}>
+    <ul class="{{ container }}-list" role="list" aria-labelledby="{{ container }}-title" aria-setsize="{{ limit }}">
+        {% for link in links %}
+
+        {% assign index = forloop.index | plus: 0 %}
+        {% assign limit = limit | plus: 0 %}
+        {% assign itemClass = container | append: "-item" %}
+
+        {% if index == 1 %}
+            {% assign itemClass = itemClass | append: " " | append: itemClass | append: "--first" %}
+        {% elsif index == limit %}
+            {% assign itemClass = itemClass | append: " " | append: itemClass | append: "--last" %}
+        {% endif %}
+
+        <li class="{{ itemClass }}" role="listitem" aria-posinset="{{ forloop.index }}">
+            <a class="{{ container }}-link" href="{{ link.url | relative_url }}" role="link">
+                {{ link.title }}
+            </a>     
+        </li>
+        {% endfor %}
+    </ul>
+</div>

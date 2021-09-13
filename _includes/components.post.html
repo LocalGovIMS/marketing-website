@@ -1,0 +1,21 @@
+{% assign level = include.level | default: "2" %}
+{% assign date = include.date | default: "true" %}
+{% assign excerpt = include.excerpt | default: "true" %}
+
+<div class="c-post">
+    <a class="c-post__link" href="{{ post.url | relative_url }}" role="link">
+        <h{{ level }} class="c-post__title">{{ post.title }}</h{{ level }}>
+    </a>
+    
+    {% if date == "true" %}
+        <p class="c-post__date">
+            Published {{ post.date | date: '%B %d, %Y' }}.
+        </p>
+    {% endif %}
+    
+    {% if excerpt == "true" %}
+        <p class="c-post__excerpt">
+            {{ post.excerpt }}
+        </p>
+    {% endif %}
+</div>

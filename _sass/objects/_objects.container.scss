@@ -1,0 +1,24 @@
+.o-container {
+    width: 100%;
+}
+
+.o-container--padded {
+    padding: 6rem 2rem;
+}
+
+.o-container--follower {
+    padding-top: 2rem;
+}
+
+.o-container--leader {
+    padding-bottom: 2rem;
+}
+
+.o-container--sunken {
+    background-color: $color--grey;
+}
+
+.o-container--focussed {
+    background-color: $color--primary;
+    color: $color--white;
+}

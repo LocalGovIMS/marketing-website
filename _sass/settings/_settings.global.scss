@@ -1,0 +1,22 @@
+$font-family: 'Montserrat', sans-serif;
+$font-size--normal: 1rem;
+
+
+
+
+$color--black: #222222;
+$color--white: #ffffff;
+$color--tertiary: #85A29E;
+$color--secondary: #FFEBBF;
+$color--white-bg: darken($color--white, 10%);
+$color--white-border: lighten($color--black, 50%);
+
+$color--primary: #85A29E;
+$color--focus: #B22148;
+$color--grey: darken(#ffffff, 10%);
+
+$width--content: 1140px;
+$width--boundary: calc(100vw - 20%);
+$width--screen: calc(100vw - 20%);
+$width--desktop: 1004px;
+$width--full: calc(100vw - (100vw - 100%));

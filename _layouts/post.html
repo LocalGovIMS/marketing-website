@@ -1,0 +1,27 @@
+---
+layout: master
+---
+
+<div class="c-banner c-banner--blog">
+    <div class="c-banner__fade">
+    </div>
+</div>
+
+<div class="o-container o-container--padded o-container--follower">
+    <div class="o-wrapper o-wrapper--content">
+        <!-- BREADCRUMBS -->
+        <aside class="c-breadcrumbs__trail" aria-labelledby="c-breadcrumbs__trail-title">
+            {% include breadcrumbs.html container="c-breadcrumbs__trail" showLast="false" lead="You are here:" %}
+        </aside>
+
+        <article class="c-post__article" aria-labelledby="c-post__article-title" role="article">
+            <div class="c-post__article-wrapper">
+                <h2 class="c-post__article-title" id="c-post__article-title" role="heading" aria-level="2">{{ page.title }}</h2>
+                <aside>
+                    <p>Posted {{ page.date | date: '%B %d, %Y' }}.</p>
+                </aside>
+                {{ content }}
+            </div>
+        </article>
+    </div>
+</div>

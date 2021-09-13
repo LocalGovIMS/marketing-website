@@ -1,0 +1,40 @@
+{% assign wrapper = include.wrapper %}
+{% assign level = include.level | default: "2" %}
+{% assign title = include.title | default: "Title" %}
+{% assign text = include.text | default: "Text content" %}
+{% assign linkUrl = include.linkUrl %}
+{% assign linkText = include.linkText | default: "Go" %}
+{% assign image = include.image %}
+{% assign styles = include.style %}
+
+<!-- TODO: Consider removing wrapper in here -->
+{% if wrapper %}
+    {% for style in wrapper | split: "," %}
+        {% assign styleClass = " o-wrapper" | append: "--" | append: style %}
+        {% assign wrapperStyles = wrapperStyles | append: styleClass %}
+    {% endfor %}
+    <div class="o-wrapper{{ wrapperStyles }}">
+{% endif %}
+
+{% for style in styles | split: "," %}
+    {% assign styleClass = " c-highlight--" | append: style %}
+    {% assign highlightStyles = highlightStyles | append: styleClass %}
+{% endfor %}
+    <div class="c-highlight{{ highlightStyles}}">
+        <div class="o-wrapper">
+            <h{{ level }} class="c-highlight__title">{{ title }}</h{{ level }}> <!-- TODO: Consider how we aria label the parent section -->
+            {% if image %}
+                <img class="c-highlight__image" src="{{ image | prepend: "/assets/images/" | relative_url }}" />
+            {% endif %}
+            <p class="c-highlight__text">{{ text | markdownify | remove: "<p>" | remove: "</p>" }}</p>
+            {% if linkUrl %}
+            <a class="c-button c-highlight__link" href="{{ linkUrl | relative_url }}">
+                {{ linkText }}
+            </a>
+            {% endif %}
+        </div>
+    </div>
+
+{% if wrapper %}
+    </div>
+{% endif %}
