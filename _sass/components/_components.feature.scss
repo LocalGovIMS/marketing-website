@@ -1,3 +1,7 @@
+.c-feature {
+    display: flex;
+    align-items: center;
+}
 
 .c-feature--highlight {
     color: $color--white;
@@ -7,7 +11,7 @@
     margin: 0;
 }
 
-.c-feature__image {
+.c-feature__img {
     display: none;
 }
 
@@ -25,12 +29,14 @@
 
 @media all and (min-width: $width--desktop) {
 
-    .c-feature__image {
+    .c-feature__content {
+        padding-right: 2rem;
+        width: 70%;
+    }
+    
+    .c-feature__img {
         display: block;
-        float: right;
-        margin-top: -4rem;
-        margin-left: 2rem;
-        //max-width: 400px;
+        float:right;
         max-height: 20rem;
     }
 

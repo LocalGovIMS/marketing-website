@@ -22,19 +22,23 @@
     {% assign featureStyles = featureStyles | append: styleClass %}
 {% endfor %}
     <div class="c-feature{{ featureStyles}}">
-        <h{{ level }} class="c-feature__title">{{ title }}</h{{ level }}> <!-- TODO: Consider how we aria label the parent section -->
-        {% if image %}
-            <img class="c-feature__image" src="{{ image | prepend: "/assets/images/" | relative_url }}" />
-        {% endif %}
-        <p class="c-feature__text">{{ text | markdownify | remove: "<p>" | remove: "</p>" }}</p>
-        {% if linkUrl %}
-            {% for style in linkStyles %}
-                {% assign linkClass = linkClass | append: " c-feature__link--" | append: style %}
-            {% endfor %}
-            <a class="c-feature__link{{ linkClass }}" href="{{ linkUrl | relative_url }}">
-                {{ linkText }}
-            </a>
-        {% endif %}
+        <div class="c-feature__content">
+            <h{{ level }} class="c-feature__title">{{ title }}</h{{ level }}> <!-- TODO: Consider how we aria label the parent section -->
+            <p class="c-feature__text">{{ text | markdownify | remove: "<p>" | remove: "</p>" }}</p>
+            {% if linkUrl %}
+                {% for style in linkStyles %}
+                    {% assign linkClass = linkClass | append: " c-feature__link--" | append: style %}
+                {% endfor %}
+                <a class="c-feature__link{{ linkClass }}" href="{{ linkUrl | relative_url }}">
+                    {{ linkText }}
+                </a>
+            {% endif %}
+        </div>
+        <div class="c-feature__image">
+            {% if image %}
+            <img class="c-feature__img" src="{{ image | prepend: "/assets/images/" | relative_url }}" />
+            {% endif %}
+        </div>
     </div>
 
 {% if wrapper %}

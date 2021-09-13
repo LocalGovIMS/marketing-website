@@ -21,16 +21,18 @@
     {% assign heroStyles = heroStyles | append: styleClass %}
 {% endfor %}
 <div class="c-hero{{ heroStyles}}">
-    <div class="o-wrapper">
+    <div class="c-hero__content">
         <h{{ level }} class="c-hero__title">{{ title }}</h{{ level }}> <!-- TODO: Consider how we aria label the parent section -->
-        {% if image %}
-            <img class="c-hero__image" src="{{ image | prepend: "/assets/images/" | relative_url }}" />
-        {% endif %}
         <p class="c-hero__text">{{ text | markdownify | remove: "<p>" | remove: "</p>" }}</p>
         {% if linkUrl %}
         <a class="c-button c-button--action c-hero__link" href="{{ linkUrl | relative_url }}">
             {{ linkText }}
         </a>
+        {% endif %}
+    </div>
+    <div class="c-hero__image">
+        {% if image %}
+            <img class="c-hero__img" src="{{ image | prepend: "/assets/images/" | relative_url }}" />
         {% endif %}
     </div>
 </div>
