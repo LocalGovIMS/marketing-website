@@ -12,8 +12,6 @@
 
 {% assign limit = path.size %}
 
-
-
 <div class="c-breadcrumbs"><!-- TODO: Match up how we do --first and --last here -->
     <h{{ level }} class="c-breadcrumbs__title" id="{{ container }}-title" role="heading" aria-level="{{ level }}">{{ title }}</h{{ level }}>
     {% if lead %}
@@ -26,7 +24,7 @@
 
         {% assign index = forloop.index | plus: 0 %}
         {% assign limit = limit | plus: 0 %}
-        {% assign itemClassPre = container | append: "-item" %}
+        {% assign itemClassPre = "c-breadcrumbs__item" %}
         {% assign itemClass = itemClassPre %}
 
         {% if index == 1 %}
