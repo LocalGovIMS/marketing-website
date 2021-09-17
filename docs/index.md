@@ -1,7 +1,7 @@
 ---
 layout: master
 title: Documentation
-navOrder: 5
+navOrder: 4
 ---
 <section class="o-container o-container--padded">
     <div class="o-wrapper o-wrapper--content">

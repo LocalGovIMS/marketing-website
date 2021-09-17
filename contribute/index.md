@@ -1,7 +1,7 @@
 ---
 layout: master
 title: Contribute
-navOrder: 6
+navOrder: 5
 ---
 
 <section class="o-container o-container--padded">

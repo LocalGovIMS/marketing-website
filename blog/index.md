@@ -1,7 +1,7 @@
 ---
 layout: master
 title: Blog
-navOrder: 7
+navOrder: 6
 ---
 
 <section class="o-container o-container--padded">
