@@ -39,7 +39,9 @@ navOrder: 5
       <label class="c-contribute__label" labelfor="email">Your organisation: *</label>
       <input class="c-contribute__text-field" name="organisation" required>
       <label class="c-contribute__label" labelfor="message">How involved would you like to be?: *</label>
-        <textarea class="c-contribute__text-area" name="message" required></textarea>
+      <textarea class="c-contribute__text-area" name="message" required></textarea>
+      <label class="c-contribute__label" labelfor="email">Join mailing list?</label>
+      <input type="checkbox" class="c-contribute__checkbox" name="subscribe" />
       <button class="c-button" type="submit">Send</button> 
       <p>* Required fields.</p>
     </form>

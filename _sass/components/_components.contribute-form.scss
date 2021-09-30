@@ -26,6 +26,16 @@
     width: 100%;
 }
 
+.c-contribute__checkbox {
+    border: solid 1px $color--white-border;
+    border-radius: .4rem;
+    clear: both;
+    display: block;
+    height: 2rem;
+    margin-bottom: 2rem;
+    width: 2rem;
+}
+
 @media all and (min-width: $width--desktop) {
 
 }
