@@ -30,6 +30,8 @@ url: "https://localgovims.digital"
 # Build settings
 permalink: /blog/:categories/:year-:month-:day-:title
 
+plugins:
+  - jekyll-feed
 
 # Exclude from processing.
 # The following items will not be processed, by default.
