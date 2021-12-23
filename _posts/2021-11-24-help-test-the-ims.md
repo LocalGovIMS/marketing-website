@@ -32,7 +32,7 @@ We know that Local Authorities are busy, and have many competing priorities, and
 
 For as many Local Authorities to take advantage of these benefits as possible, we’re taking an alternative approach to our private beta tests and minimising the input required. We’ve taken inspiration from other teams in government, and hosting a model office, which we encourage Local Authorities to take part in. 
 
-# What is a model office?
+### What is a model office?
 
 A model office is a simulated work environment, allowing us to test a solution in a realistic way. Our IMS model office will be shaped around four aspects: 
 
@@ -41,7 +41,7 @@ A model office is a simulated work environment, allowing us to test a solution i
 * Working with other organisations using the IMS
 * Our expectations from a supplier of a managed service 
 
-# When and where?
+### When and where?
 
 We’re hosting 3 sessions remotely:
 

@@ -18,7 +18,7 @@ At the end of Alpha we decided to split the Beta into two parts, approaching it 
 
 Barnsley’s IMS is the starting point for private Beta 1. We’re stripping out some functionality that is linked to Barnsley specific tech choices to create the foundation from which to create the open source IMS.
 
-# Preparing for Private Beta 1 
+### Preparing for Private Beta 1 
 
 We started preparing for Private Beta 1 at the end of June. 
 
@@ -34,18 +34,18 @@ We shaped a set of goals for Private Beta 1. We discussed who the users of the o
 
 We also considered our ways of working, how we’ll collaborate and communicate.
  
-# Private Beta (1) Vision 
+### Private Beta (1) Vision 
 
 A free, reusable and open source income management system. Built for the public good, and managed and owned by a community of users. That is easy and affordable to maintain and enhance.
 
-# Private Beta (1) Goals 
+### Private Beta (1) Goals 
 
 * Engage and build a community of IMS users
 * Evolving code-use, with contributors and consumers
 * Design a governance model that works
 * A strong and funded proposition for continued development
  
-# Sprint Plan
+### Sprint Plan
 
 Private Beta 1 is expected to be 11 sprints long.
 
@@ -57,7 +57,7 @@ We’ve split the work into 3 parts, and there will be a pause between each part
 
 Between each phase we’ll hold a show and tell, open to any councils that would like to meet the team, hear more about our work, and ask questions.  
 
-# Sprint One
+### Sprint One
 We’re halfway through our 1st sprint. 
 
 Our main development task has been to de-couple Barnsley’s IMS from their current payment service provider so we can integrate with a range of PSPs. 
@@ -69,5 +69,5 @@ This sprint we’ve also:
 * Begun to think about what our community of IMS users will need and expect
 * Onboarded new team members 
  
-# The Team 
+### The Team 
 Richard (Barnsley MBC), Glen (Dorset), Tony (Huntingdonshire), Egle (MHCLG) and Joseph, Isobel and Marcia (dxw).
