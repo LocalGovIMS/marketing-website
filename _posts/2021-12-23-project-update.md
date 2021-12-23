@@ -11,7 +11,7 @@ The IMS project is a collaborative effort between Barnsley, Dorset and Huntingdo
 
 The project team includes Glen (Dorset), Tony (Huntingdonshire), Richard, Dan and Dean (Barnsley) and Joseph, Marcia and Isobel (dxw).
 
-# What’s been happening
+### What’s been happening
 
 Over recent sprints the team have focussed on preparing for a private beta test. This is an important part of the project, and reasons for testing the system are to:
 
@@ -44,7 +44,7 @@ An IMS model office will be shaped around these aspects
 
 We’ve chosen to focus the model office on parking fine transactions. We mapped this process, identified where there were gaps in our IMS demo site to facilitate testing, and developed the system accordingly.
 
-# What we’re currently doing
+### What we’re currently doing
 
 * We’re continuing to plan the model office and prepare a demo site.
 * Louise has been helping us to review the content design of the system. There are two objectives to undertaking this work: to review what's there, to ensure councils know how to use it, and what functionality does. To provide guidance when developing
@@ -53,7 +53,7 @@ future features.
 * We’re pushing out comms on a regular basis to build awareness and encourage engagement in the work.
 * We’re revising our sprint plan for the new year.
 
-# Next steps
+### Next steps
 
 * The model office will take place in January.
 * In mid January we’ll explore how Dorset may take on the open source IMS.
